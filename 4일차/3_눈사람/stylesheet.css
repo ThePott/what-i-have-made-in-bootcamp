@@ -1,0 +1,144 @@
+/* ---- GENERAL ---- */
+/* initialize */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+fieldset {
+    border: 0
+}
+
+/* layout */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 100%;
+}
+
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+/* ---- SPECIFIC TO THIS PROJECT ---- */
+
+#app-boundary {
+    max-width: 500px;
+    height: calc(100vh - 96px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 48px;
+    position: relative;
+    background-color: rgb(176, 201, 201);
+}
+
+#app-boundary>* {
+    position: relative;
+}
+
+/* part */
+#part1 {
+    position: relative;
+    width: fit-content;
+    top: 100px;
+    transform: rotate(30deg);
+    z-index: 40;
+    top: 90px;
+    left: 65px;
+}
+#hat1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px 12px 0 0;
+}
+#hat2 {
+    width: 200px;
+    height: 25px;
+    border-radius: 12px;
+}
+[id*="hat"] {
+    background-image: linear-gradient(#49350f, rgb(43, 32, 10));
+}
+
+#part2 {
+    top: 50px;
+    z-index: 30;
+}
+#body1 {
+    width: 200px;
+    height: 200px;
+}
+#eye-box {
+    justify-content: space-between;
+    padding: 24px;
+    height: 100%;
+}
+#nose {
+    width: 60px;
+    height: 24px;
+    background-color: rgb(207, 123, 27);
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    border-radius: 12px;
+}
+
+
+#part3 {
+    position: relative;
+    transform: rotate(-7deg);
+    z-index: 20;
+}
+
+#arm1 {
+    position: relative;
+    left: 16px;
+    z-index: -1;
+    transform: rotate(15deg); 
+}
+#arm2 { 
+    position: relative;
+    right: 16px;
+    z-index: -1;
+    transform: rotate(-15deg); 
+}
+[id*=arm] {
+    width: 100px; 
+    height: 8px; 
+    background-color: rgb(84, 50, 34); 
+    border-radius: 8px;
+}
+#body2 {
+    width: 220px;
+    height: 220px;
+
+    justify-content: space-between; 
+    padding: 48px 0;
+}
+
+#body3 {
+    width: 300px;
+    height: 300px;
+    top: -50px;
+}
+
+[id*="body"] {
+    background-image: linear-gradient(#e5ebec, rgb(248, 243, 232));
+    border-radius: 50%;
+}
+
+.dot {
+    background-image: linear-gradient(#49350f, rgb(43, 32, 10));
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+}

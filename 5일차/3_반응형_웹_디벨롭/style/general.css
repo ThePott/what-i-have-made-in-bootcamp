@@ -1,0 +1,189 @@
+/* ---- GENERAL ---- */
+/* initialize */
+* {
+    font-family: nerd-regular;
+    /* font-family: noto-sans-kr; */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+fieldset {
+    border: 0
+}
+
+section {
+    width: 100%;
+}
+header {
+    width: 100%;
+}
+/* aside {
+    width: 100%;
+} */
+
+/* layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.box {
+    max-width: 600px;
+    width: 100%;
+    margin: 48px 0;
+}
+
+.innerBox {
+    padding: 48px;
+}
+
+.block {
+    display: block;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.flex-col {
+    flex-direction: column;
+}
+
+.align-items-start {
+    align-items: start;
+}
+.align-items-center {
+    align-items: center;
+}
+.align-items-end {
+    align-items: end;
+}
+
+.w-full {
+    width: 100%;
+}
+
+
+/* title */
+.titleBox {
+    background-color: black;
+    /* padding: 48px 48px 24px 48px; */
+    padding: 48px;
+    border-radius: 12px 12px 0 0;
+}
+
+.icon {
+    width: 48px;
+    border-radius: 12px;
+}
+
+/* end button */
+#btn-submit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    background-color: black;
+    color: #F6F2EE;
+    ;
+    padding: 24px;
+    font-size: 16px;
+    border-radius: 0 0 12px 12px;
+    border: 0;
+    font-family: nerd-regular;
+}
+
+#btn-submit:hover {
+    font-family: nerd-bold;
+}
+
+#btn-submit:active {
+    background-color: #313030;
+}
+
+
+/* spacing */
+.m-12 { margin: 48px; }
+
+.my-6 { margin: 24px 0px; }
+
+.mx-3 { margin: 0 12px;}
+
+.mt-12 { margin-top: 48px; }
+.mt-6 { margin-top: 24px }
+.mt-3 { margin-top: 12px; }
+.mt-2 { margin-top: 8px; }
+.mt-1 { margin-top: 4px; }
+
+.mb-6 { margin-bottom: 24px;}
+
+.gap-6 { gap: 24px; }
+.gap-3 { gap: 12px; }
+.gap-2 { gap: 8px; }
+.gap-1 { gap: 4px; }
+
+.p-3 { padding: 12px; }
+.py-3 { padding: 12px 0; }
+hr {
+    margin: 24px 0;
+}
+
+/* font */
+/* @font-face {
+    font-family: "noto-sans-kr";
+    src: url("./NotoSansKR-VariableFont_wght.ttf");
+} */
+@font-face {
+    font-family: "nerd-regular";
+    src: url("../font/0xProtoNerdFontPropo-Regular.ttf");
+}
+
+@font-face {
+    font-family: "nerd-bold";
+    src: url("../font/0xProtoNerdFontPropo-Bold.ttf");
+}
+
+/* markdown */
+h1 {
+    /* font-family: noto-sans-kr; */
+    font-family: nerd-bold;
+    font-weight: 900;
+    font-size: 30px;
+    color: #F6F2EE;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* font-family: noto-sans-kr; */
+    font-family: nerd-bold;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+/* 소제목 */
+.bold {
+    /* font-family: noto-sans-kr; */
+    font-family: nerd-bold;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.label {
+    font-size: 16px;
+    /* font-family: noto-sans-kr; */
+    font-family: nerd-bold;
+    font-weight: 900;
+    display: inline;
+}
+
+.font-color-white {
+    color: #F6F2EE;
+}

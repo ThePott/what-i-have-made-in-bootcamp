@@ -1,0 +1,255 @@
+* {
+    color: rgb(68, 55, 49)
+}
+
+
+
+.btn-nav {
+    font-size: 18px;
+    font-weight: 900;
+    border: none;
+    background-color: transparent;
+}
+
+
+.btn-chat {
+    font-size: 18px;
+    height: 48px;
+    padding: 0 12px;
+    border-radius: 12px;
+    border: 1px solid #787370;
+    background-color: transparent;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#form {
+    /* font-size: 18px; */
+    height: 48px;
+    width: 144px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #787370;
+    background-color: transparent;
+}
+
+#form img {
+    height: 100%;
+}
+
+.searchbar {
+    font-size: 18px;
+    border: none;
+    width: 100%;
+}
+
+.searchbar:focus {
+    outline: none;
+}
+
+
+button.active {
+    color: coral;
+}
+
+
+/* long section */
+#long-section {
+    width: 100%;
+    height: 288px;
+    background-color: rgb(238, 199, 185);
+}
+
+#long-section div {
+    height: 100%;
+    background-color: rosybrown;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+#long-section p:first-child {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+#long-section p:last-child {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+/* main */
+main>p {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+/* info section */
+#info-section {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* background-color: lightgreen; */
+}
+
+.card {
+    height: 96px;
+}
+
+.thumbnail {
+    min-width: 96px;
+    height: 96px;
+    border-radius: 12px;
+    background-color: rosybrown;
+}
+
+.info-text-group {
+    padding: 12px;
+    flex-basis: 192px;
+    /* background-color: red; */
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.info-text-group p:nth-child(1) {
+    font-size: 18px;
+}
+
+.info-text-group p:nth-child(2) {
+    flex-grow: 1;
+}
+
+.info-text-group p:nth-child(3) {
+    /* font-size: 16px; */
+    font-weight: 900;
+}
+
+.banner {
+    background-color: rgb(230, 238, 246);
+    display: flex;
+    border-radius: 12px;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.banner p {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.banner button {
+    font-size: 16px;
+    height: 48px;
+    padding: 0 12px;
+    border-radius: 12px;
+    border: none;
+    background-color: coral;
+    color: white;
+}
+
+/* footer */
+#text-column-group {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+}
+
+footer p,
+a,
+div {
+    color: rgb(137, 137, 137);
+}
+
+.btn-sm {
+    font-size: 12px;
+    height: 32px;
+    width: 32px;
+    border-radius: 12px;
+    border: 1px solid #787370;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 900px) {
+    .searchbar {
+        display: none;
+    }
+
+    #form {
+        width: 48px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .searchbar {
+        display: none;
+    }
+
+    #header-right .btn-chat p {
+        display: none;
+    }
+
+    #header-right .btn-chat {
+        width: 48px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #header-right .btn-chat img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    #nav {
+        display: none;
+    }
+}
+
+/* long-section */
+@media screen and (max-width: 672px) {
+    #long-section p:last-child {
+        display: none;
+    }
+
+    .banner {
+        display: block;
+        height: auto;
+    }
+
+    .banner button {
+        margin-top: 12px;
+    }
+
+    #footer-lower {
+        display: block;
+    }
+
+    #footer-lower div:last-child {
+        margin-top: 12px;
+    }
+
+    #text-column-group {
+        display: block;
+    }
+
+    #text-column-group button {
+        font-size: 18px;
+        border: none;
+        background-color: transparent;
+        font-weight: 900;
+        padding: 0;
+        height: auto;
+    }
+    #text-column-group div:last-child {
+        margin-top: 12px;
+    }
+}

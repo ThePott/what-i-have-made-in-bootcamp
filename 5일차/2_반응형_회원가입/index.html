@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="./style/general.css">
+    <link rel="stylesheet" href="./style/specific.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <header>
+                <div class="titleBox">
+                    <div id="titleInline" class="gap-6 flex">
+                        <img src="./img/icon.png" alt="icon" class="icon">
+                        <h1 id="titleText">Sign Up</h1>
+                    </div>
+                    <p class="mt-3" style="color: white;">And become a member <br class="when-sm"/>of NERD &#129299;</p>
+                </div>
+            </header>
+
+            <main>
+                <form>
+                    <div class="innerBox">
+                        <fieldset title="necessaryInfo"">
+                            <input type=" text" name="name" id="name" placeholder="Name" class="textField">
+                            <input type="email" name="email" id="email" placeholder="Email" class="textField mt-3">
+                            <input type="password" name="password" id="password" placeholder="Password" class="textField mt-3">
+                            <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone Number" class="textField mt-3">
+
+                            <div class="mt-6" title="sexSelection">
+                                <p class="label">Sex</p>
+                                <input type="radio" name="sex" id="male">
+                                <label for="male">Male</label>
+                                <input type="radio" name="sex" id="female">
+                                <label for="female">Female</label>
+
+                            </div>
+                        </fieldset>
+
+                        <hr class="my-6" />
+
+                        <fieldset title="cookInfo">
+                            <div title="foodYouLike">
+                                <h2>Food You Like</h2>
+                                <label for="bongole" class="block mt-3">
+                                    <input type="checkbox" name="whatILike" value="bongole" id="bongole">
+                                    Bongole Pasta
+                                </label>
+                                <label for="myungran" class="block">
+                                    <input type="checkbox" name="whatILike" value="myungran" id="myungran">
+                                    Myungran Pasta
+                                </label>
+                                <label for="carbonara" class="block">
+                                    <input type="checkbox" name="whatILike" value="carbonara" id="carbonara">
+                                    Carbonara
+                                </label>
+                                <label for="pajun" class="block">
+                                    <input type="checkbox" name="whatILike" value="pajun" id="pajun">
+                                    Seafood Pajun
+                                </label>
+                                <label for="tteokbokki" class="block">
+                                    <input type="checkbox" name="whatILike" value="tteokbokki" id="tteokbokki">
+                                    Tteokbokki
+                                </label>
+                            </div>
+
+                            <div class="mt-6" title="cookDay">
+                                <label for="cookDay" class="bold">When do you cook most often?</label>
+                                <select name="cookDay" id="cookDay">
+                                    <option value="mon">Monday</option>
+                                    <option value="tue">Tuesday</option>
+                                    <option value="wed">Wednesday</option>
+                                    <option value="thu">Thursday</option>
+                                    <option value="fri">Friday</option>
+                                    <option value="sat">Saturday</option>
+                                    <option value="sun">Sunday</option>
+                                </select>
+                            </div>
+                        </fieldset>
+
+                        <hr class="my-6" />
+
+                        <fieldset title="termsOfUse">
+                            <h2>Terms Of Use</h2>
+                            <div class="flex mt-3 gap-2">
+                                <input type="checkbox" name="termsOfUse" value="TOU1" id="TOU1">
+                                <label for="TOU1">Keep your routine.</label>
+                            </div>
+                            <div class="flex mt-3 gap-2">
+                                <input type="checkbox" name="termsOfUse" value="TOU2" id="TOU2">
+                                <label for="TOU2">First failiure is okay, but second failiure is start of new habit.</label>
+                            </div>
+                            <div class="flex mt-3 gap-2">
+                                <input type="checkbox" name="termsOfUse" value="TOU3" id="TOU3">
+                                <label for="TOU3">Clean out every possible distractions.</label>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <button type="submit" class="submitButton">
+                        Submit
+                    </button>
+                </form>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>

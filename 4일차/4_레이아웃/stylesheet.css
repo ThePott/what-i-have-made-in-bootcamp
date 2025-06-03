@@ -1,0 +1,271 @@
+/* ---- GENERAL ---- */
+/* initialize */
+* {
+    font-family: nerd-regular;
+    /* font-family: noto-sans-kr; */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+fieldset {
+    border: 0
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.block {
+    display: block;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.w-good {
+    max-width: 672px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* title */
+.titleBox {
+    background-color: black;
+    /* padding: 48px 48px 24px 48px; */
+    padding: 48px;
+    border-radius: 12px 12px 0 0;
+}
+
+.icon {
+    width: 48px;
+    border-radius: 12px;
+}
+
+/* end button */
+#btn-submit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    background-color: black;
+    color: #F6F2EE;
+    ;
+    padding: 24px;
+    font-size: 16px;
+    border-radius: 0 0 12px 12px;
+    border: 0;
+    font-family: nerd-regular;
+}
+
+#btn-submit:hover {
+    font-family: nerd-bold;
+}
+
+#btn-submit:active {
+    background-color: #313030;
+}
+
+
+/* spacing */
+.m-12 {
+    margin: 48px;
+}
+
+.my-6 {
+    margin: 24px 0px;
+}
+
+.mt-12 {
+    margin-top: 48px;
+}
+
+.mt-6 {
+    margin-top: 24px
+}
+
+.mt-3 {
+    margin-top: 12px;
+}
+
+.mt-2 {
+    margin-top: 8px;
+}
+
+.mt-1 {
+    margin-top: 4px;
+}
+
+.gap-6 {
+    gap: 24px;
+}
+
+.gap-3 {
+    gap: 12px;
+}
+
+.gap-2 {
+    gap: 8px;
+}
+
+.gap-1 {
+    gap: 4px;
+}
+
+.pt-12 {
+    padding-top: 48px;
+}
+
+.pt-6 {
+    padding-top: 24px;
+}
+.pb-6 {
+    padding-bottom: 24px;
+}
+
+.py-3 {
+    padding: 12px 0;
+}
+
+hr {
+    margin: 24px 0;
+}
+
+/* font */
+/* @font-face {
+    font-family: "noto-sans-kr";
+    src: url("./NotoSansKR-VariableFont_wght.ttf");
+} */
+@font-face {
+    font-family: "nerd-regular";
+    src: url("./0xProtoNerdFontPropo-Regular.ttf");
+}
+
+@font-face {
+    font-family: "nerd-bold";
+    src: url("./0xProtoNerdFontPropo-Bold.ttf");
+}
+
+/* markdown */
+h1 {
+    /* font-family: noto-sans-kr; */
+    font-family: nerd-bold;
+    font-weight: 900;
+    font-size: 30px;
+    color: #F6F2EE;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* font-family: noto-sans-kr; */
+    font-family: nerd-bold;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+/* 소제목 */
+.bold {
+    /* font-family: noto-sans-kr; */
+    font-family: nerd-bold;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.label {
+    font-size: 16px;
+    /* font-family: noto-sans-kr; */
+    font-family: nerd-bold;
+    font-weight: 900;
+    display: inline;
+}
+
+/* ---- SPECIFIC TO THIS PROJECT ---- */
+/* section 1 */
+.btn-box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.font-logo {
+    font-family: nerd-bold;
+    font-size: 30px;
+    color: white
+}
+
+.font-in-box {
+    font-family: nerd-regular;
+    font-size: 16px;
+    color: white;
+}
+
+/* section 2 */
+#section_1 {
+    background-color: papayawhip;
+    width: 100vw;
+    height: 300px;
+    font-size: 30px;
+    font-family: nerd-bold;
+}
+
+#section_2 {
+    background-color: yellowgreen;
+    height: 300px;
+    font-size: 16px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+}
+
+#section_3 {
+    flex-wrap: wrap;
+}
+
+.long_box {
+    width: calc((100% - 12px * 3) / 4); 
+    height: 400px; 
+    background-color: coral; 
+    float: left;
+    color: white;
+}
+
+#btn-up {
+    position: fixed;
+     bottom: 50px; 
+     right: 50px; 
+}
