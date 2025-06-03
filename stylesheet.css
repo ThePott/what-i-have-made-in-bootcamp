@@ -9,9 +9,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color: #F6F2EE;
+    /* color: #F6F2EE; */
     font-size: 16px;
     font-family: noto-sans-kr;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
 }
 
 .con-wrap-row {
@@ -37,11 +42,72 @@ div#full-screen {
     position: relative;
 }
 
-/* wallpaper */
-img#wallpaper {
-    position: fixed;
+div#app-boundary {
+    max-width: 600px;
     width: 100%;
-    height: 100%;
-    z-index: -2;
-    object-fit: cover;
+    height: 800px;
+    /* background-color: aquamarine; */
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+div#app-boundary header#header {
+    background-color: black;
+    padding: 48px 48px 24px;
+    border-radius: 12px 12px 0 0;
+    color: white;
+}
+div#app-boundary header#header h1 {
+    font-size: 30px;
+    font-weight: 900;
+}
+div#app-boundary header#header a {
+    margin-top: 12px;
+    display: block;
+}
+
+div#app-boundary main#main {
+    /* background-color: chocolate; */
+    /* margin: 0 48px; */
+    padding: 48px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-color: black transparent;
+    /* scrollbar- */
+}
+
+div#app-boundary main#main section.day-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    border: 1px solid black;
+}
+
+div#app-boundary main#main section.day-section div.project-card {
+    padding: 8px 12px;
+    border-radius: 12px;
+    border: 1px solid black;
+}
+div#app-boundary main#main section.day-section div.project-card a {
+    display: block;
+}
+
+div#app-boundary footer#footer {
+    background-color: black;
+    padding: 24px 48px;
+    display: flex;
+    gap: 24px;
+    border-radius: 0 0 12px 12px;
+}
+
+div#app-boundary footer#footer img {
+    height: 30px;
 }
