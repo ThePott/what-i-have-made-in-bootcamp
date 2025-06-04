@@ -59,19 +59,22 @@ div#app-boundary header#header {
     border-radius: 12px 12px 0 0;
     color: white;
 }
+
 div#app-boundary header#header h1 {
     font-size: 30px;
     font-weight: 900;
 }
+
 div#app-boundary header#header a {
     margin-top: 12px;
     display: block;
     width: fit-content;
     transition: color 0.05s;
 }
+
 /* div#app-boundary header#header a:hover { */
-    /* color: coral */
-    /* background-color: coral; */
+/* color: coral */
+/* background-color: coral; */
 /* } */
 
 div#app-boundary main#main {
@@ -102,6 +105,7 @@ div#app-boundary main#main section.day-section div.project-card {
     border-radius: 12px;
     border: 1px solid black;
 }
+
 div#app-boundary main#main section.day-section div.project-card a {
     display: block;
 }
@@ -116,4 +120,22 @@ div#app-boundary footer#footer {
 
 div#app-boundary footer#footer img {
     height: 30px;
+}
+
+@media screen and (max-width: 600px) {
+    div#full-screen {
+        align-items: start;
+    }
+
+    div#app-boundary {
+	height: auto;
+    }
+
+    div#app-boundary header#header {
+	border-radius: 0;
+    }
+
+    div#app-boundary footer#footer {
+	border-radius: 0;
+    }
 }
