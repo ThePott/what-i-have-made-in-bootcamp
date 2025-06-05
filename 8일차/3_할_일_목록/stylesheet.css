@@ -85,29 +85,38 @@ div#app-boundary main#main div.todo-row p.isDone {
 
 div#app-boundary footer#footer {
     width: 100%;
+    background-color: blue;
+}
+
+div#app-boundary footer#footer form#form {
+    width: 100%;
     background-color: red;
     padding: 8px;
     display: flex;
+    flex-direction: row;
     gap: 12px;
     border-radius: 12px;
     /* height: 100px; */
 }
 
-div#app-boundary footer#footer input#todo-input {
+div#app-boundary footer#footer form#form input#todo-input {
     flex-grow: 1;
+    /* width: 100%; */
     background-color: transparent;
     border: none;
+    /* display: block; */
 }
-div#app-boundary footer#footer input#todo-input:focus {
+div#app-boundary footer#footer form#form input#todo-input:focus {
     outline: none;
 }
-div#app-boundary footer#footer input#todo-input:focus {
+div#app-boundary footer#footer form#form input#todo-input:focus {
     outline: none;
 }
 
-div#app-boundary footer#footer button#add-button {
+div#app-boundary footer#footer form#form button#add-button {
     padding: 8px;
     border: none;
     /* background-color: none; */
     border-radius: 12px;
+    /* display: block; */
 }
