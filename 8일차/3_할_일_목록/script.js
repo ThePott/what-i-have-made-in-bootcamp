@@ -67,6 +67,8 @@ function addNewTodo(todo) {
     row.appendChild(p)
 
     main.appendChild(row)
+
+    main.scrollTop = main.scrollHeight
 }
 
 function updateTodoStore() {
@@ -83,4 +85,6 @@ function loadTodoList() {
         addNewTodo(todo)
     }
     todoArray = [...result]
+
+    main.scrollTop = main.scrollHeight
 }

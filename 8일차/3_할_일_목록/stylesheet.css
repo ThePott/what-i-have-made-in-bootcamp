@@ -58,7 +58,7 @@ div#app-boundary header#header {
     color: white;
     padding: 24px 48px;
     border-radius: 12px 12px 0 0;
-    height: 77px;
+    /* height: 77px; */
 }
 
 div#app-boundary main#main {
@@ -103,7 +103,7 @@ div#app-boundary footer#footer {
     background-color: black;
     border-radius: 0 0 12px 12px;
     padding: 12px 48px;
-    height: 83px;
+    /* height: 83px; */
 }
 
 div#app-boundary footer#footer form#form {
