@@ -91,6 +91,26 @@ div#app-boundary main#main {
     /* scrollbar- */
 }
 
+div#app-boundary main#main section#study-section {
+    /* border: 1px solid black; */
+    /* padding: 8px 12px; */
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+}
+
+div#app-boundary main#main section#study-section a {
+    display: block;
+    padding: 12px;
+    border-radius: 12px;
+    /* background-color: black; */
+    /* color: white; */
+    border: 1px solid black;
+    font-weight: 900;
+}
+
 div#app-boundary main#main section.day-section {
     display: flex;
     flex-direction: column;
