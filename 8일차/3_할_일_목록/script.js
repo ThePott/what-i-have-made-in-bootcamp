@@ -1,6 +1,6 @@
 const main = document.getElementById("main")
 const form = document.getElementById("form");
-
+const todoInput = document.getElementById("todo-input")
 // localStorage.clear()
 let todoArray = []
 loadTodoList()
@@ -20,6 +20,8 @@ form.addEventListener("submit", function (event) {
     addNewTodo(todo)
 
     updateTodoStore()
+
+    todoInput.value = ""
 })
 
 function addNewTodo(todo) {
@@ -41,7 +43,14 @@ function addNewTodo(todo) {
 
     const deleteButton = document.createElement("button")
     deleteButton.classList.add("delete-button")
-    deleteButton.textContent = "삭제"
+
+    const crossImg = document.createElement("img")
+    crossImg.src = "./img/cross.svg"
+    crossImg.alt = "delete"
+
+    // deleteButton.textContent = "삭제"
+    deleteButton.appendChild(crossImg)
+    // const crossImg = 
 
     deleteButton.addEventListener("click", function () {
         const row = deleteButton.parentNode

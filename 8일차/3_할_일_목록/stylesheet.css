@@ -42,7 +42,7 @@ div#app-boundary {
     width: 100%;
     height: 800px;
     /* padding: 12px; */
-    background-color: darkkhaki;
+    /* background-color: darkkhaki; */
     border-radius: 12px;
 
     display: flex;
@@ -58,23 +58,26 @@ div#app-boundary header#header {
     color: white;
     padding: 24px 48px;
     border-radius: 12px 12px 0 0;
+    height: 77px;
 }
 
 div#app-boundary main#main {
     padding: 0 48px;
     flex-grow: 1;
+
     display: flex;
     flex-direction: column;
-    justify-content: end;
     align-items: end;
-    background-color: lightcoral;
+    
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-color: black transparent;
 }
 div#app-boundary main#main div.todo-row {
-    background-color: lightslategray;
     display: flex;
     gap: 12px;
     padding: 8px;
-    align-items: end;  
+    align-items: center;
 }
 div#app-boundary main#main div.todo-row button.delete-button {
     width: 30px;
@@ -83,11 +86,13 @@ div#app-boundary main#main div.todo-row button.delete-button {
     border-radius: 50%;
     border: none;
     background-color: black;
+    /* align-self: center; */
 }
 div#app-boundary main#main div.todo-row p {
-    padding: 8px;
-    background-color: cornflowerblue;
+    padding: 12px;
+    /* background-color: cornflowerblue; */
     border-radius: 12px;
+    border: 1px solid black;
 }
 div#app-boundary main#main div.todo-row p.isDone {
     background-color: darkgreen;
@@ -95,7 +100,10 @@ div#app-boundary main#main div.todo-row p.isDone {
 
 div#app-boundary footer#footer {
     width: 100%;
-    /* background-color: blue; */
+    background-color: black;
+    border-radius: 0 0 12px 12px;
+    padding: 12px 48px;
+    height: 83px;
 }
 
 div#app-boundary footer#footer form#form {
@@ -105,7 +113,8 @@ div#app-boundary footer#footer form#form {
     flex-direction: row;
     gap: 12px;
     border-radius: 12px;
-    border: 1px solid black;
+    /* border: 1px solid white; */
+    background-color: white;
 }
 
 div#app-boundary footer#footer form#form input#todo-input {
