@@ -41,7 +41,7 @@ div#app-boundary {
     max-width: 600px;
     width: 100%;
     height: 800px;
-    padding: 12px;
+    /* padding: 12px; */
     background-color: darkkhaki;
     border-radius: 12px;
 
@@ -53,13 +53,20 @@ div#app-boundary {
 div#app-boundary header#header {
     font-size: 24px;
     font-weight: 900;
+    background-color: black;
+    width: 100%;
+    color: white;
+    padding: 24px 48px;
+    border-radius: 12px 12px 0 0;
 }
 
 div#app-boundary main#main {
+    padding: 0 48px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: end;
+    align-items: end;
     background-color: lightcoral;
 }
 div#app-boundary main#main div.todo-row {
@@ -70,9 +77,12 @@ div#app-boundary main#main div.todo-row {
     align-items: end;
 }
 div#app-boundary main#main div.todo-row button.delete-button {
+    width: 30px;
+    height: 30px;
     padding: 8px;
     border-radius: 50%;
     border: none;
+    background-color: black;
 }
 div#app-boundary main#main div.todo-row p {
     padding: 8px;
@@ -90,22 +100,18 @@ div#app-boundary footer#footer {
 
 div#app-boundary footer#footer form#form {
     width: 100%;
-    /* background-color: red; */
     padding: 8px;
     display: flex;
     flex-direction: row;
     gap: 12px;
     border-radius: 12px;
     border: 1px solid black;
-    /* height: 100px; */
 }
 
 div#app-boundary footer#footer form#form input#todo-input {
     flex-grow: 1;
-    /* width: 100%; */
     background-color: transparent;
     border: none;
-    /* display: block; */
 }
 div#app-boundary footer#footer form#form input#todo-input:focus {
     outline: none;
