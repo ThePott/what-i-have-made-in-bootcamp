@@ -47,7 +47,7 @@ div#app-boundary {
 
     display: flex;
     flex-direction: column;
-    align-items: end;
+    /* align-items: end; */
 }
 
 div#app-boundary header#header {
@@ -67,7 +67,7 @@ div#app-boundary main#main {
 
     display: flex;
     flex-direction: column;
-    align-items: end;
+    /* align-items: end; */
     
     overflow-y: scroll;
     overflow-x: hidden;
@@ -145,10 +145,19 @@ div#app-boundary footer#footer form#form button#add-button {
 
     div#app-boundary {
         height: 100vh;
+        align-items: end;
     }
 
     div#app-boundary header#header {
         border-radius: 0;
+    }
+
+    div#app-boundary main#main {
+        align-items: end;
+    }
+
+    div#app-boundary main#main div.todo-row {
+        flex-direction: row-reverse;
     }
 
     div#app-boundary footer#footer {
