@@ -137,3 +137,21 @@ div#app-boundary footer#footer form#form button#add-button {
     border-radius: 12px;
     /* display: block; */
 }
+
+@media screen and (max-width: 600px) {
+    div#full-screen {
+        align-items: start;
+    }
+
+    div#app-boundary {
+        height: 100vh;
+    }
+
+    div#app-boundary header#header {
+        border-radius: 0;
+    }
+
+    div#app-boundary footer#footer {
+        border-radius: 0;
+    }
+}
