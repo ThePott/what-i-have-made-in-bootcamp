@@ -74,7 +74,7 @@ div#app-boundary main#main div.todo-row {
     display: flex;
     gap: 12px;
     padding: 8px;
-    align-items: end;
+    align-items: end;  
 }
 div#app-boundary main#main div.todo-row button.delete-button {
     width: 30px;
