@@ -50,7 +50,27 @@ div#app-boundary {
 
     display: flex;
     flex-direction: column;
+
+    animation-timing-function: cubic-bezier(0.5, -0.5, 1, 1.5);
+    animation: drop 0.5s
 }
+
+@keyframes drop {
+    0% {
+        transform: translateY(-500px);
+        scale: 150%;
+        opacity: 0%;
+        -webkit-filter: blur(50px);
+    }
+
+    100% {
+        transform: translateY(0);
+        scale: 100%;
+        opacity: 100%;
+        -webkit-filter: blur(0);
+    }
+}
+
 
 div#app-boundary header#header {
     background-color: black;
@@ -106,9 +126,10 @@ div#app-boundary main#main section#study-section a {
     border-radius: 12px;
     /* background-color: black; */
     /* color: white; */
-    border: 1px solid black;
-    font-weight: 900;
+    font-weight: 600;
 }
+
+
 
 div#app-boundary main#main section.day-section {
     display: flex;
@@ -116,13 +137,23 @@ div#app-boundary main#main section.day-section {
     gap: 24px;
     padding: 8px 12px;
     border-radius: 12px;
-    border: 1px solid black;
+    border: 1px solid #00000055;
 }
 
 div#app-boundary main#main section.day-section div.project-card {
     padding: 8px 12px;
     border-radius: 12px;
-    border: 1px solid black;
+}
+
+div#app-boundary main#main section#study-section a,
+div#app-boundary main#main section.day-section div.project-card {
+    border: 1px solid #00000055;
+}
+
+div#app-boundary main#main section#study-section a:hover,
+div#app-boundary main#main section.day-section div.project-card:hover {
+    border: 1px solid #000000;
+    transition: border 0.05s;
 }
 
 div#app-boundary main#main section.day-section div.project-card a {
@@ -147,14 +178,14 @@ div#app-boundary footer#footer img {
     }
 
     div#app-boundary {
-	height: auto;
+        height: auto;
     }
 
     div#app-boundary header#header {
-	border-radius: 0;
+        border-radius: 0;
     }
 
     div#app-boundary footer#footer {
-	border-radius: 0;
+        border-radius: 0;
     }
 }
