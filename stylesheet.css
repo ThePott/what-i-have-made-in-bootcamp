@@ -53,25 +53,27 @@ div#app-boundary {
 }
 
 .scaled-drop {
-    animation-timing-function: ease-out;
-    animation: scaled-drop 0.5s
+    animation-name: scaled-drop;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(.12,-0.05,.14,1.84);
 }
 
 .blur {
-    animation-timing-function: ease-out;
-    animation: blur 0.5s
+    animation-name: blur;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(.08,.34,.61,1.06);
 }
 
 @keyframes scaled-drop {
     from {
         transform: translateY(-100px);
-        scale: 110%;
-        opacity: 0%;
+        /* scale: 110%; */
+        /* opacity: 0%; */
     }
     to {
         transform: translateY(0);
-        scale: 100%;
-        opacity: 100%;
+        /* scale: 100%; */
+        /* opacity: 100%; */
     }
 }
 
