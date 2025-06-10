@@ -61,28 +61,35 @@ div#app-boundary {
 .blur {
     animation-name: blur;
     animation-duration: 0.5s;
-    animation-timing-function: cubic-bezier(.08,.34,.61,1.06);
+    /* animation-timing-function: cubic-bezier(.08,.34,.61,1.06); */
+    animation-timing-function: cubic-bezier(.08,.34,.26,1.11);
 }
 
 @keyframes scaled-drop {
     from {
         transform: translateY(-100px);
-        /* scale: 110%; */
-        /* opacity: 0%; */
+        scale: 50%;
+        opacity: 0%;
     }
     to {
         transform: translateY(0);
-        /* scale: 100%; */
-        /* opacity: 100%; */
+        scale: 100%;
+        opacity: 100%;
     }
 }
 
 @keyframes blur {
     from {
         -webkit-filter: blur(50px);
+        transform: translateY(-100px);
+        scale: 110%;
+        opacity: 0%;
     }
     to {
         -webkit-filter: blur(0);
+        transform: translateY(0);
+        scale: 100%;
+        opacity: 100%;
     }
 }
 
