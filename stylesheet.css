@@ -56,14 +56,14 @@ div#app-boundary {
 }
 
 @keyframes drop {
-    0% {
+    from {
         transform: translateY(-500px);
         scale: 150%;
         opacity: 0%;
         -webkit-filter: blur(50px);
     }
 
-    100% {
+    to {
         transform: translateY(0);
         scale: 100%;
         opacity: 100%;
