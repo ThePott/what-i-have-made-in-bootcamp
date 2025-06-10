@@ -50,23 +50,36 @@ div#app-boundary {
 
     display: flex;
     flex-direction: column;
-
-    animation-timing-function: cubic-bezier(0.5, -0.5, 1, 1.5);
-    animation: drop 0.5s
 }
 
-@keyframes drop {
-    from {
-        transform: translateY(-500px);
-        scale: 150%;
-        opacity: 0%;
-        -webkit-filter: blur(50px);
-    }
+.scaled-drop {
+    animation-timing-function: ease-out;
+    animation: scaled-drop 0.5s
+}
 
+.blur {
+    animation-timing-function: ease-out;
+    animation: blur 0.5s
+}
+
+@keyframes scaled-drop {
+    from {
+        transform: translateY(-100px);
+        scale: 110%;
+        opacity: 0%;
+    }
     to {
         transform: translateY(0);
         scale: 100%;
         opacity: 100%;
+    }
+}
+
+@keyframes blur {
+    from {
+        -webkit-filter: blur(50px);
+    }
+    to {
         -webkit-filter: blur(0);
     }
 }
