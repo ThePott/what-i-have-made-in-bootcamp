@@ -1,0 +1,88 @@
+/* font */
+/* @font-face {
+    font-family: "noto-sans-kr";
+    src: url("./font/NotoSansKR-VariableFont_wght.ttf");
+} */   
+
+/* general */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* color: #F6F2EE; */
+    font-size: 16px;
+    font-family: noto-sans-kr;
+}
+
+.con-wrap-row {
+    display: flex;
+}
+
+.con-wrap-row-gap-3 {
+    display: flex;
+    gap: 12px;
+}
+
+.con-wrap-row-gap-6 {
+    display: flex;
+    gap: 24px;
+}
+
+div#full-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+div#app-boundary {
+    max-width: 288px;
+    width: 100%;
+    height: 320px;
+    border-radius: 12px;
+    padding: 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 12px;
+    overflow: hidden;
+
+    background-color: aqua;
+}
+
+div#app-boundary section#formula-section {
+    padding: 12px 0;
+    background-color: coral;
+}
+
+div#app-boundary section#result-section {
+    padding: 12px 0;
+    background-color: coral;
+}
+
+div#app-boundary main#main {
+    /* display: flex;  */
+    /* flex-wrap: wrap;
+    /* gap: 12px; */
+    display: grid;
+    gap: 12px;
+    /* grid-template-columns: calc((100% - 36) / 4);  */
+    grid-template-columns: repeat(4, 1fr)
+}
+
+div#app-boundary main#main button {
+    font-size: 30px;
+    width: 57px;
+    height: 57px;
+    border: none;
+    overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cornflowerblue;
+}
