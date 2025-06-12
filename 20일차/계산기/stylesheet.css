@@ -40,7 +40,7 @@ div#full-screen {
 div#app-boundary {
     max-width: 288px;
     width: 100%;
-    height: 320px;
+    /* height: 320px; */
     border-radius: 12px;
     padding: 12px;
 
@@ -73,7 +73,7 @@ div#app-boundary main#main {
     grid-template-columns: repeat(4, 1fr)
 }
 
-div#app-boundary main#main button {
+div#app-boundary main#main button.button {
     font-size: 30px;
     width: 57px;
     height: 57px;
