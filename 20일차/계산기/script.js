@@ -94,16 +94,40 @@ const addEventListenerToButton = (buttonText, button) => {
             break
         case ".":
             eventListener = () => {
-                currentSection.innerText = ""
-                previousSection.innerText = ""
+                const text = currentSection.innerText
+                const lastChar = text.at(-1)
+                console.log("---- last char:", lastChar)
+                if (lastChar === ".") {
+                    return
+                }
+
+                if (typeof lastChar !== "number") {
+                    currentSection.innerText += "0."
+                    return
+                }
+
+                // 앞에 아무것도 없으면 그냥 0.
+
+                // 살아남은 건 모두 숫자
+                // 000은 0으로 해야, 하지만 0.000에서는 0 더 붙이기 가능
+                const splitedArray = text.split("/[\d.]+/")
+                console.log("---- splitted array:", splitedArray)
+
+                currentSection.innerText += buttonText
+                // if ()
+                // if (formulaSection)
+                // resultSection.innerText = ""
             }
             break
         case 0:
+            // !TODO!
+            // . 로직이랑 0 로직이 섞여 있다.
+            // 구분해야
             eventListener = () => {
                 const text = currentSection.innerText
-                const lastChar = text[-1]
-
-                if (typeof lastChar === ".") {
+                const lastChar = text.at(-1)
+                console.log("---- last char:", lastChar)
+                if (lastChar === ".") {
                     return
                 }
 
