@@ -53,14 +53,16 @@ div#app-boundary {
     background-color: aqua;
 }
 
-div#app-boundary section#formula-section {
+div#app-boundary section#previous-section {
     padding: 12px 0;
     background-color: coral;
+    font-size: 24px;
 }
 
-div#app-boundary section#result-section {
+div#app-boundary section#current-section {
     padding: 12px 0;
     background-color: coral;
+    font-size: 30px;
 }
 
 div#app-boundary main#main {
@@ -74,7 +76,7 @@ div#app-boundary main#main {
 }
 
 div#app-boundary main#main button.button {
-    font-size: 30px;
+    font-size: 24px;
     width: 57px;
     height: 57px;
     border: none;

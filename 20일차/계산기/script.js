@@ -1,6 +1,6 @@
 const main = document.querySelector("#main")
-const formulaSection = document.querySelector("#formula-section")
-const resultSection = document.querySelector("#result-section")
+const previousSection = document.querySelector("#previous-section")
+const currentSection = document.querySelector("#current-section")
 
 const buttonContentArray = [
     "C", "()", "%", "back",
@@ -10,80 +10,97 @@ const buttonContentArray = [
     0, ".", "=", "+"
 ]
 
-const addEventListenerToButton = (innerText, button) => {
-    // if (typeof innerText === "number") {
-    //     button.addEventListener("click", () => {
-    //         formulaSection.innerHTML += innerText
-    //     })
-    //     return
-    // }
+// const handlerForArithmetic = (currentSection, buttonText) => {
+//     const lastCharInNumber = Number(currentSection.innerText.at(-1))
+//     // console.log("last char:", innerText.at(-1), "in number:", lastCharInNumber, lastCharInNumber >= 0)
+//     if (lastCharInNumber >= 0) {
+//         currentSection.innerText += buttonText
+//     } else {
+//         const trimmedInnerText = currentSection.innerText.slice(0, -1)
+//         currentSection.innerText = `${trimmedInnerText}${buttonText}`
+//     }
+// }
 
+const addEventListenerToButton = (buttonText, button) => {
     let eventListener;
+    // console.log("----button:", button, "inner text as argument:", buttonText)
 
-    switch (innerText) {
+    switch (buttonText) {
         case "C":
             eventListener = () => {
-                formulaSection.innerText = ""
-                resultSection.innerText = ""
+                currentSection.innerText = ""
+                previousSection.innerText = ""
             }
             break
         case "()":
             eventListener = () => {
-                formulaSection.innerText = ""
-                resultSection.innerText = ""
+                // 규칙이 뭐냐
+                // 1. 앞에 숫자다
+                //      a) 열린 괄호 수 > 닫힌 괄호
+                //            닫는다
+                //      b) 아님
+                //          *(추가
+                // 앞이 기호다
+                //      a) .이 아니면
+                //          새로 엶
+                //      b) .이면
+                //          .없애고 *(
+                currentSection.innerText = ""
+                previousSection.innerText = ""
             }
             break
         case "%":
             eventListener = () => {
-                formulaSection.innerText = ""
-                resultSection.innerText = ""
+                currentSection.innerText = ""
+                previousSection.innerText = ""
             }
             break
         case "back":
             eventListener = () => {
-                formulaSection.innerText = ""
-                resultSection.innerText = ""
+                currentSection.innerText = ""
+                previousSection.innerText = ""
             }
             break
+
+        // 사칙연산은 핸들러 규칙이 같음
         case "÷":
-            eventListener = () => {
-                formulaSection.innerText = ""
-                resultSection.innerText = ""
-            }
-            break
         case "*":
-            eventListener = () => {
-                formulaSection.innerText = ""
-                resultSection.innerText = ""
-            }
-            break
         case "-":
-            eventListener = () => {
-                formulaSection.innerText = ""
-                resultSection.innerText = ""
-            }
-            break
         case "+":
             eventListener = () => {
-                formulaSection.innerText += innerText
-                // resultSection.innerText = ""
+                const lastCharInNumber = Number(currentSection.innerText.at(-1))
+                // console.log("last char:", innerText.at(-1), "in number:", lastCharInNumber, lastCharInNumber >= 0)
+                if (lastCharInNumber >= 0) {
+                    currentSection.innerText += buttonText
+                } else {
+                    const trimmedInnerText = currentSection.innerText.slice(0, -1)
+                    currentSection.innerText = `${trimmedInnerText}${buttonText}`
+                }
             }
             break
         case "=":
             eventListener = () => {
-                formulaSection.innerText = ""
-                resultSection.innerText = ""
+                const formula = currentSection.innerText
+                
+                // //g 정규표현식
+                // ^ 여집합
+                // \- (escape)-
+                formula.replace(/[^0-9+\-*/().]/g, "");
+
+                previousSection.innerText = formula
+                const result = eval(formula);
+                currentSection.innerText = result
             }
             break
         case ".":
             eventListener = () => {
-                formulaSection.innerText = ""
-                resultSection.innerText = ""
+                currentSection.innerText = ""
+                previousSection.innerText = ""
             }
             break
         case 0:
             eventListener = () => {
-                const text = formulaSection.innerText
+                const text = currentSection.innerText
                 const lastChar = text[-1]
 
                 if (typeof lastChar === ".") {
@@ -91,7 +108,7 @@ const addEventListenerToButton = (innerText, button) => {
                 }
 
                 if (typeof lastChar !== "number") {
-                    formulaSection.innerText += "0."
+                    currentSection.innerText += "0."
                     return
                 }
 
@@ -102,7 +119,7 @@ const addEventListenerToButton = (innerText, button) => {
                 const splitedArray = text.split("/[\d.]+/")
                 console.log("---- splitted array:", splitedArray)
 
-                formulaSection.innerText += innerText
+                currentSection.innerText += buttonText
                 // if ()
                 // if (formulaSection)
                 // resultSection.innerText = ""
@@ -111,7 +128,8 @@ const addEventListenerToButton = (innerText, button) => {
         default:
             // consider they are all natural numbers
             eventListener = () => {
-                formulaSection.innerHTML += innerText
+                // console.log("---- consider this is a number")
+                currentSection.innerHTML += buttonText
             }
         // console.log(`---- WRONG INPUT HOW DID YOU DO THAT??? input: "${innerText}"`)
 
